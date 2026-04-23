@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Términos de Uso — Reader Browser / Terms of Use — Reader Browser</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-muted: #8b949e;
+      --accent: #58a6ff;
+      --accent2: #7c6af5;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      padding: 0 0 80px;
+    }
+    header {
+      background: linear-gradient(135deg, #1a1f2e 0%, #0d1117 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 40px 24px 32px;
+      text-align: center;
+    }
+    .logo { font-size: 42px; margin-bottom: 12px; display: block; }
+    header h1 { font-size: 22px; font-weight: 700; color: #fff; letter-spacing: 0.5px; }
+    header p { color: var(--text-muted); font-size: 13px; margin-top: 6px; }
+    .badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #7c6af5, #58a6ff);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-top: 12px;
+      letter-spacing: 0.8px;
+    }
+    .lang-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .lang-btn {
+      padding: 6px 18px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: linear-gradient(135deg, #7c6af5, #58a6ff);
+      border-color: transparent;
+      color: #fff;
+      font-weight: 600;
+    }
+    .container { max-width: 760px; margin: 0 auto; padding: 32px 24px; }
+    .content-block { display: none; }
+    .content-block.active { display: block; }
+    h2 {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--accent);
+      margin: 36px 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h2:first-child { margin-top: 0; }
+    h2::before { content: ''; display: inline-block; width: 3px; height: 14px; background: var(--accent); border-radius: 2px; }
+    h3 { font-size: 16px; font-weight: 600; color: #e6edf3; margin: 20px 0 8px; }
+    p { color: var(--text); margin-bottom: 12px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { margin-bottom: 6px; color: var(--text); }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      margin-bottom: 12px;
+    }
+    .card p:last-child, .card ul:last-child { margin-bottom: 0; }
+    .highlight {
+      border-left: 3px solid var(--accent2);
+      padding: 12px 16px;
+      background: rgba(124, 106, 245, 0.08);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin-bottom: 12px;
+    }
+    .warn {
+      border-left: 3px solid #d29922;
+      padding: 12px 16px;
+      background: rgba(210, 153, 34, 0.08);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin-bottom: 12px;
+    }
+    .date-info { text-align: center; color: var(--text-muted); font-size: 13px; margin-top: 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    @media (max-width: 480px) {
+      .container { padding: 20px 16px; }
+      header { padding: 28px 16px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <span class="logo">🌀</span>
+  <h1>Reader Browser</h1>
+  <p>Terms of Use &amp; Términos de Uso</p>
+  <span class="badge">Legal &amp; Privacy</span>
+</header>
+
+<div class="lang-toggle">
+  <button class="lang-btn active" onclick="showLang('es')">🇪🇸 Español</button>
+  <button class="lang-btn" onclick="showLang('en')">🇬🇧 English</button>
+</div>
+
+<!-- ===== ESPAÑOL ===== -->
+<div id="es" class="content-block active">
+  <div class="container">
+
+    <h2>Aceptación</h2>
+    <div class="card">
+      <p>Al usar Reader Browser, aceptas estos Términos de Uso. Si no los aceptas, no uses la aplicación.</p>
+      <p><strong>Última actualización:</strong> Abril 2025</p>
+    </div>
+
+    <h2>1. Limitación de Responsabilidad</h2>
+    <div class="card">
+      <h3>Contenido de terceros</h3>
+      <p>Reader Browser es un navegador web. No somos responsables del contenido de los sitios web que visites mediante la app. La responsabilidad del contenido recae exclusivamente en los propietarios de dichos sitios.</p>
+      <h3>Sin garantías</h3>
+      <p>La app se proporciona "tal cual", sin garantías expresas ni implícitas de ningún tipo. No garantizamos que la app funcione sin interrupciones ni errores en todos los dispositivos.</p>
+      <div class="highlight">
+        <p>En ningún caso seremos responsables por daños directos, indirectos, incidentales, especiales o consecuentes derivados del uso de la app o de los sitios visitados a través de ella.</p>
+      </div>
+    </div>
+
+    <h2>2. Ad Blocker y Page Cleaner</h2>
+    <div class="card">
+      <div class="warn">
+        <p>El Bloqueador de Anuncios y el Limpiador de Página pueden no funcionar en todos los sitios web. Algunos sitios utilizan técnicas avanzadas que pueden sortear estos filtros.</p>
+      </div>
+      <ul>
+        <li>El rendimiento de estas herramientas puede variar según el sitio web visitado.</li>
+        <li>No garantizamos el bloqueo del 100% de los anuncios ni la eliminación completa de todos los elementos.</li>
+        <li>Algunos sitios pueden detectar el uso de bloqueadores y restringir el acceso a su contenido.</li>
+      </ul>
+    </div>
+
+    <h2>3. Uso Aceptable</h2>
+    <div class="card">
+      <p>Te comprometes a usar Reader Browser únicamente para fines legales y de acuerdo con estas condiciones. Queda expresamente prohibido:</p>
+      <ul>
+        <li>Usar la app para actividades ilegales o que violen derechos de terceros.</li>
+        <li>Distribuir, modificar o descompilar la app sin autorización.</li>
+        <li>Intentar acceder a sistemas o datos no autorizados mediante la app.</li>
+        <li>Usar la app para difundir contenido ilegal, dañino o fraudulento.</li>
+      </ul>
+    </div>
+
+    <h2>4. Monetización — Monedas y Premium</h2>
+    <div class="card">
+      <h3>Monedas (Coins)</h3>
+      <p>Las monedas adquiridas dentro de la app (<em>in-app purchases</em>) son bienes digitales <strong>no reembolsables</strong>. Una vez completada la compra, los coins se acreditan en tu cuenta y no pueden canjearse por dinero real.</p>
+      <h3>Pase Premium</h3>
+      <p>El Pase Premium es una suscripción de renovación automática gestionada íntegramente a través de <strong>Google Play</strong>. El precio, la frecuencia de facturación y los términos específicos se muestran en la ficha de Google Play antes de completar la compra.</p>
+      <div class="highlight">
+        <p><strong>Cancelación:</strong> Puedes cancelar la suscripción Premium en cualquier momento desde Google Play → Suscripciones. El acceso Premium seguirá activo hasta el final del período de facturación ya abonado. No se emiten reembolsos parciales por el tiempo restante.</p>
+      </div>
+    </div>
+
+    <h2>5. Contenido de Terceros</h2>
+    <div class="card">
+      <p>Reader Browser es exclusivamente un navegador web. No alojamos, creamos ni distribuimos el contenido de los sitios web que visites. No tenemos control sobre ese contenido y no somos responsables de su exactitud, legalidad o adecuación.</p>
+      <p>Los enlaces a sitios externos que aparezcan en la app no implican respaldo ni afiliación con esos sitios.</p>
+    </div>
+
+    <h2>6. Propiedad Intelectual</h2>
+    <div class="card">
+      <p>Reader Browser, su nombre, logo, código fuente, diseño y materiales asociados son propiedad exclusiva de sus desarrolladores y están protegidos por las leyes de propiedad intelectual.</p>
+      <p>No se te concede ningún derecho sobre la propiedad intelectual de la app más allá del derecho de uso personal contemplado en estas condiciones.</p>
+    </div>
+
+    <h2>7. Privacidad</h2>
+    <div class="card">
+      <p>El tratamiento de tus datos personales se rige por nuestra <a href="https://zeltrax3000.github.io/reader-browser-privacy/">Política de Privacidad</a>, que forma parte integrante de estos Términos de Uso.</p>
+    </div>
+
+    <h2>8. Modificaciones a los Términos</h2>
+    <div class="card">
+      <p>Nos reservamos el derecho de modificar estos Términos en cualquier momento. Los cambios entran en vigor desde su publicación. El uso continuado de la app tras la publicación de cambios implica la aceptación de los nuevos Términos.</p>
+      <p>Te recomendamos revisar esta página periódicamente.</p>
+    </div>
+
+    <h2>9. Ley Aplicable</h2>
+    <div class="card">
+      <p>Estos Términos se rigen por las leyes aplicables en la jurisdicción del desarrollador. Cualquier disputa se resolverá conforme a dicha legislación.</p>
+    </div>
+
+    <h2>Contacto</h2>
+    <div class="card">
+      <p>Para cualquier consulta relacionada con estos Términos, puedes contactarnos a través de la ficha de la app en Google Play.</p>
+    </div>
+
+    <p class="date-info">Versión 1.0 — Abril 2025 · Reader Browser</p>
+  </div>
+</div>
+
+<!-- ===== ENGLISH ===== -->
+<div id="en" class="content-block">
+  <div class="container">
+
+    <h2>Acceptance</h2>
+    <div class="card">
+      <p>By using Reader Browser, you agree to these Terms of Use. If you do not agree, please do not use the application.</p>
+      <p><strong>Last updated:</strong> April 2025</p>
+    </div>
+
+    <h2>1. Limitation of Liability</h2>
+    <div class="card">
+      <h3>Third-party content</h3>
+      <p>Reader Browser is a web browser. We are not responsible for the content of websites you visit through the app. The content responsibility lies solely with the owners of those websites.</p>
+      <h3>No warranties</h3>
+      <p>The app is provided "as is", without express or implied warranties of any kind. We do not guarantee that the app will operate without interruption or error on all devices.</p>
+      <div class="highlight">
+        <p>In no event shall we be liable for any direct, indirect, incidental, special or consequential damages arising from the use of the app or the sites visited through it.</p>
+      </div>
+    </div>
+
+    <h2>2. Ad Blocker and Page Cleaner</h2>
+    <div class="card">
+      <div class="warn">
+        <p>The Ad Blocker and Page Cleaner may not work on all websites. Some sites use advanced techniques that may bypass these filters.</p>
+      </div>
+      <ul>
+        <li>The performance of these tools may vary depending on the website visited.</li>
+        <li>We do not guarantee 100% ad blocking or complete removal of all elements.</li>
+        <li>Some sites may detect the use of blockers and restrict access to their content.</li>
+      </ul>
+    </div>
+
+    <h2>3. Acceptable Use</h2>
+    <div class="card">
+      <p>You agree to use Reader Browser only for lawful purposes and in accordance with these terms. The following is expressly prohibited:</p>
+      <ul>
+        <li>Using the app for illegal activities or those that violate third-party rights.</li>
+        <li>Distributing, modifying or decompiling the app without authorization.</li>
+        <li>Attempting to access unauthorized systems or data through the app.</li>
+        <li>Using the app to spread illegal, harmful or fraudulent content.</li>
+      </ul>
+    </div>
+
+    <h2>4. Monetization — Coins and Premium</h2>
+    <div class="card">
+      <h3>Coins</h3>
+      <p>Coins acquired within the app (in-app purchases) are digital goods and are <strong>non-refundable</strong>. Once the purchase is complete, coins are credited to your account and cannot be exchanged for real money.</p>
+      <h3>Premium Pass</h3>
+      <p>The Premium Pass is an auto-renewing subscription managed entirely through <strong>Google Play</strong>. The price, billing frequency and specific terms are displayed on the Google Play listing before completing the purchase.</p>
+      <div class="highlight">
+        <p><strong>Cancellation:</strong> You may cancel the Premium subscription at any time via Google Play → Subscriptions. Premium access will remain active until the end of the already-paid billing period. No partial refunds are issued for the remaining time.</p>
+      </div>
+    </div>
+
+    <h2>5. Third-Party Content</h2>
+    <div class="card">
+      <p>Reader Browser is exclusively a web browser. We do not host, create or distribute the content of the websites you visit. We have no control over that content and are not responsible for its accuracy, legality or suitability.</p>
+      <p>Links to external sites appearing in the app do not imply endorsement or affiliation with those sites.</p>
+    </div>
+
+    <h2>6. Intellectual Property</h2>
+    <div class="card">
+      <p>Reader Browser, its name, logo, source code, design and associated materials are the exclusive property of their developers and are protected by intellectual property laws.</p>
+      <p>No rights to the intellectual property of the app are granted to you beyond the right of personal use contemplated in these terms.</p>
+    </div>
+
+    <h2>7. Privacy</h2>
+    <div class="card">
+      <p>The processing of your personal data is governed by our <a href="https://zeltrax3000.github.io/reader-browser-privacy/">Privacy Policy</a>, which forms an integral part of these Terms of Use.</p>
+    </div>
+
+    <h2>8. Changes to Terms</h2>
+    <div class="card">
+      <p>We reserve the right to modify these Terms at any time. Changes take effect from their publication. Continued use of the app after publication of changes implies acceptance of the new Terms.</p>
+      <p>We recommend reviewing this page periodically.</p>
+    </div>
+
+    <h2>9. Governing Law</h2>
+    <div class="card">
+      <p>These Terms are governed by the applicable laws of the developer's jurisdiction. Any dispute will be resolved in accordance with such legislation.</p>
+    </div>
+
+    <h2>Contact</h2>
+    <div class="card">
+      <p>For any queries related to these Terms, you can contact us through the app's listing on Google Play.</p>
+    </div>
+
+    <p class="date-info">Version 1.0 — April 2025 · Reader Browser</p>
+  </div>
+</div>
+
+<script>
+function showLang(lang) {
+  document.querySelectorAll('.content-block').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+  document.getElementById(lang).classList.add('active');
+  event.currentTarget.classList.add('active');
+}
+</script>
+</body>
+</html>
